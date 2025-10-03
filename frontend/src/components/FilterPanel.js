@@ -229,44 +229,44 @@ const FilterPanel = ({ filters, updateFilters, analytics }) => {
             <div className="flex items-center space-x-2 text-sm">
               <span className="text-gray-600">Active filters:</span>
               <div className="flex flex-wrap gap-2">
-                {filters.provider && (
+                {filters.provider && filters.provider !== "all" && (
                   <Badge variant="secondary" className="bg-blue-50 text-blue-700">
                     Provider: {filters.provider}
                     <button
-                      onClick={() => updateFilters({ provider: "" })}
+                      onClick={() => updateFilters({ provider: "all" })}
                       className="ml-1 text-blue-600 hover:text-blue-800"
                     >
                       <X className="h-3 w-3" />
                     </button>
                   </Badge>
                 )}
-                {filters.model && (
+                {filters.model && filters.model !== "all" && (
                   <Badge variant="secondary" className="bg-blue-50 text-blue-700">
                     Model: {filters.model}
                     <button
-                      onClick={() => updateFilters({ model: "" })}
+                      onClick={() => updateFilters({ model: "all" })}
                       className="ml-1 text-blue-600 hover:text-blue-800"
                     >
                       <X className="h-3 w-3" />
                     </button>
                   </Badge>
                 )}
-                {filters.user_id && (
+                {filters.user_id && filters.user_id !== "all" && (
                   <Badge variant="secondary" className="bg-blue-50 text-blue-700">
                     User: {filters.user_id}
                     <button
-                      onClick={() => updateFilters({ user_id: "" })}
+                      onClick={() => updateFilters({ user_id: "all" })}
                       className="ml-1 text-blue-600 hover:text-blue-800"
                     >
                       <X className="h-3 w-3" />
                     </button>
                   </Badge>
                 )}
-                {filters.service && (
+                {filters.service && filters.service !== "all" && (
                   <Badge variant="secondary" className="bg-blue-50 text-blue-700">
                     Service: {filters.service}
                     <button
-                      onClick={() => updateFilters({ service: "" })}
+                      onClick={() => updateFilters({ service: "all" })}
                       className="ml-1 text-blue-600 hover:text-blue-800"
                     >
                       <X className="h-3 w-3" />
