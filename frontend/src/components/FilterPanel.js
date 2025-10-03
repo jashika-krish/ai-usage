@@ -150,7 +150,7 @@ const FilterPanel = ({ filters, updateFilters, analytics }) => {
                 <SelectValue placeholder="All users" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All users</SelectItem>
+                <SelectItem value="all">All users</SelectItem>
                 {getUniqueUsers().map(user => (
                   <SelectItem key={user} value={user}>
                     {user}
