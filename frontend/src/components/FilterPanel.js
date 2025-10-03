@@ -124,7 +124,7 @@ const FilterPanel = ({ filters, updateFilters, analytics }) => {
                 <SelectValue placeholder="All models" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All models</SelectItem>
+                <SelectItem value="all">All models</SelectItem>
                 {getUniqueModels().map(model => (
                   <SelectItem key={model} value={model}>
                     {model}
