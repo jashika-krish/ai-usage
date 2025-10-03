@@ -12,7 +12,7 @@ const Header = ({ currentPage, analytics }) => {
       case 'analytics':
         return 'Analytics & Insights';
       default:
-        return 'AI Usage Analyzer';
+        return "Night's Watch AI Analyzer";
     }
   };
 
