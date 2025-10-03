@@ -98,7 +98,7 @@ const FilterPanel = ({ filters, updateFilters, analytics }) => {
                 <SelectValue placeholder="All providers" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All providers</SelectItem>
+                <SelectItem value="all">All providers</SelectItem>
                 {getUniqueProviders().map(provider => (
                   <SelectItem key={provider} value={provider}>
                     {provider.charAt(0).toUpperCase() + provider.slice(1)}
