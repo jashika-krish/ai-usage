@@ -50,9 +50,9 @@ const Sidebar = ({ currentPage, setCurrentPage }) => {
           </div>
           <div>
             <h1 className="text-xl font-bold gradient-text">
-              AI Analyzer
+              Night's Watch
             </h1>
-            <p className="text-sm text-gray-500">Usage Intelligence</p>
+            <p className="text-sm text-gray-500">AI Usage Intelligence</p>
           </div>
         </div>
       </div>
