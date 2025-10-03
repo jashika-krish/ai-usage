@@ -22,10 +22,10 @@ function App() {
   const [analytics, setAnalytics] = useState(null);
   const [loading, setLoading] = useState(false);
   const [filters, setFilters] = useState({
-    provider: "",
-    model: "",
-    user_id: "",
-    service: "",
+    provider: "all",
+    model: "all",
+    user_id: "all",
+    service: "all",
     days: 7
   });
 
