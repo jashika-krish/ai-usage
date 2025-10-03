@@ -16,7 +16,10 @@ const FilterPanel = ({ filters, updateFilters, analytics }) => {
     });
   };
 
-  const hasActiveFilters = filters.provider || filters.model || filters.user_id || filters.service;
+  const hasActiveFilters = (filters.provider && filters.provider !== "all") || 
+                         (filters.model && filters.model !== "all") || 
+                         (filters.user_id && filters.user_id !== "all") || 
+                         (filters.service && filters.service !== "all");
 
   // Extract unique values from analytics for filter options
   const getUniqueProviders = () => {
