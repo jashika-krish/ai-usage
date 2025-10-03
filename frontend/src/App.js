@@ -60,10 +60,10 @@ function App() {
       const params = new URLSearchParams();
       params.append('limit', limit.toString());
       
-      if (filters.provider) params.append('provider', filters.provider);
-      if (filters.model) params.append('model', filters.model);
-      if (filters.user_id) params.append('user_id', filters.user_id);
-      if (filters.service) params.append('service', filters.service);
+      if (filters.provider && filters.provider !== "all") params.append('provider', filters.provider);
+      if (filters.model && filters.model !== "all") params.append('model', filters.model);
+      if (filters.user_id && filters.user_id !== "all") params.append('user_id', filters.user_id);
+      if (filters.service && filters.service !== "all") params.append('service', filters.service);
       
       const response = await axios.get(`${API}/v1/ai-usage/events?${params}`, {
         headers: apiHeaders
