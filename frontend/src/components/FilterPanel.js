@@ -8,10 +8,10 @@ import { Filter, X, Calendar } from 'lucide-react';
 const FilterPanel = ({ filters, updateFilters, analytics }) => {
   const clearFilters = () => {
     updateFilters({
-      provider: "",
-      model: "",
-      user_id: "",
-      service: "",
+      provider: "all",
+      model: "all", 
+      user_id: "all",
+      service: "all",
       days: 7
     });
   };
