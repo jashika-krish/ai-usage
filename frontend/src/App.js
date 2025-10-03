@@ -112,7 +112,10 @@ function App() {
 
   // Refresh events when filters change
   useEffect(() => {
-    if (filters.provider || filters.model || filters.user_id || filters.service) {
+    if ((filters.provider && filters.provider !== "all") || 
+        (filters.model && filters.model !== "all") || 
+        (filters.user_id && filters.user_id !== "all") || 
+        (filters.service && filters.service !== "all")) {
       fetchEvents();
     }
   }, [filters.provider, filters.model, filters.user_id, filters.service]);
