@@ -226,7 +226,7 @@ async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(s
 # API Routes
 @api_router.get("/")
 async def root():
-    return {"message": "AI Usage Analyzer API", "version": "1.0.0"}
+    return {"message": "Night's Watch AI Usage Analyzer API", "version": "1.0.0"}
 
 @api_router.post("/v1/ai-usage/events", response_model=AIUsageEvent)
 async def create_usage_event(
